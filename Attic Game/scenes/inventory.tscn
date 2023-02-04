@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/toys/toy.gd" type="Script" id=1]
+[ext_resource path="res://scenes/ToyChooser.gd" type="Script" id=2]
+[ext_resource path="res://scenes/inventory.gd" type="Script" id=3]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+
+[sub_resource type="NoiseTexture" id=2]
+noise = SubResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_left = 25.0
+margin_top = 27.0
+margin_right = 169.0
+margin_bottom = 572.0
+
+[node name="ItemList" type="ItemList" parent="MarginContainer"]
+margin_right = 144.0
+margin_bottom = 545.0
+allow_reselect = true
+icon_mode = 0
+fixed_icon_size = Vector2( 64, 64 )
+script = ExtResource( 2 )
+
+[node name="List Noise" type="Sprite" parent="MarginContainer/ItemList"]
+position = Vector2( 249, 241 )
+scale = Vector2( 0.25293, 0.28125 )
+texture = SubResource( 2 )
+script = ExtResource( 1 )
+
+[connection signal="child_entered_tree" from="." to="." method="_on_Control_child_entered_tree"]
+[connection signal="child_exiting_tree" from="." to="." method="_on_Control_child_exiting_tree"]
+[connection signal="child_entered_tree" from="MarginContainer/ItemList" to="MarginContainer/ItemList" method="_on_ItemList_child_entered_tree"]
+[connection signal="child_exiting_tree" from="MarginContainer/ItemList" to="MarginContainer/ItemList" method="_on_ItemList_child_exiting_tree"]
+[connection signal="item_selected" from="MarginContainer/ItemList" to="MarginContainer/ItemList" method="_on_ItemList_item_selected"]

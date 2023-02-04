@@ -7,12 +7,16 @@ class_name Toybox
 
 signal grabbed(node)
 signal dropped(node)
+signal store(node)
 
 var currently_grabbed_child = null
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
+func _process(delta):
+	if Input.is_action_just_pressed("ui_select") and currently_grabbed_child != null:
+		remove_child(currently_grabbed_child)
+		emit_signal("store", currently_grabbed_child)
+		currently_grabbed_child = null
 
 func _on_child_grabbed(node):
 	if currently_grabbed_child == null:
@@ -28,9 +32,19 @@ func _on_child_dropped(node):
 #func _process(delta):
 #	pass
 
+func _on_item_retrieve(node):
+	add_child(node)
 
 func _on_Toybox_child_entered_tree(node):
-	node.connect("grabbed", self, "_on_child_grabbed")
-	node.connect("dropped", self, "_on_child_dropped")
-	self.connect("grabbed", node, "_on_Toy_grabbed")
-	self.connect("dropped", node, "_on_Toy_dropped")
+	if node is Toy:
+		node.connect("grabbed", self, "_on_child_grabbed")
+		node.connect("dropped", self, "_on_child_dropped")
+		self.connect("grabbed", node, "_on_Toy_grabbed")
+		self.connect("dropped", node, "_on_Toy_dropped")
+	
+func _on_Toybox_child_exiting_tree(node):
+	if node is Toy:
+		node.disconnect("grabbed", self, "_on_child_grabbed")
+		node.disconnect("dropped", self, "_on_child_dropped")
+		self.disconnect("grabbed", node, "_on_Toy_grabbed")
+		self.disconnect("dropped", node, "_on_Toy_dropped")

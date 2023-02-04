@@ -12,12 +12,17 @@ func _ready():
 
 signal grabbed(node)
 signal dropped(node)
+signal put_away(node)
+
 var dragging = false
 var rotating = false
 var grabbed_node = null
+var active = true
 
 
 func _input(event):
+	if not active:
+		return
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT:
 			if get_rect().has_point(to_local(event.position)):
