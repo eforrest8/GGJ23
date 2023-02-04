@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/map.png" type="Texture" id=1]
+
+[node name="map" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 513.25, 301.5 )
+scale = Vector2( 1.25214, 1.28913 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 1 )
