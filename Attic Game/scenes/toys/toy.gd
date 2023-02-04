@@ -27,7 +27,7 @@ func _input(event):
 		if event.button_index == BUTTON_LEFT:
 			if get_rect().has_point(to_local(event.position)):
 				# Start dragging if the click is on the sprite.
-				if not dragging and event.pressed:
+				if not dragging and event.pressed and is_pixel_opaque(to_local(event.position)):
 					emit_signal("grabbed", self)
 					dragging = true
 			# Stop dragging if the button is released.
@@ -35,7 +35,7 @@ func _input(event):
 				emit_signal("dropped", self)
 				dragging = false
 		if event.button_index == BUTTON_RIGHT:
-			if get_rect().has_point(to_local(event.position)):
+			if get_rect().has_point(to_local(event.position)) and is_pixel_opaque(to_local(event.position)):
 				if not rotating and event.pressed:
 					emit_signal("grabbed", self)
 					rotating = true
