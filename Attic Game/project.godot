@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Area2D",
+"class": "Book",
+"language": "GDScript",
+"path": "res://scripts/book_scripts.gd"
+}, {
 "base": "Sprite",
 "class": "Toy",
 "language": "GDScript",
@@ -18,16 +23,27 @@ _global_script_classes=[ {
 "class": "Toybox",
 "language": "GDScript",
 "path": "res://scripts/toybox.gd"
+}, {
+"base": "Label",
+"class": "dialogue",
+"language": "GDScript",
+"path": "res://scripts/text_script.gd"
 } ]
 _global_script_class_icons={
+"Book": "",
 "Toy": "",
-"Toybox": ""
+"Toybox": "",
+"dialogue": ""
 }
 
 [application]
 
 config/name="Attic Game"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=720
 
 [gui]
 

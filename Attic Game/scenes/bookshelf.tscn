@@ -1,0 +1,325 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://assets/Bookshelf.png" type="Texture" id=1]
+[ext_resource path="res://scripts/ui_panel_script.gd" type="Script" id=2]
+[ext_resource path="res://fonts/c-cari-pakpol-font/CariPakpol-d9jBX.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://scripts/book_scripts.gd" type="Script" id=4]
+[ext_resource path="res://scripts/text_script.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.40205, 4.21689 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1.96492, 6.50228 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 2.24562, 4.52968 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 4.8655, 7.23287 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 2.12574, 5.42238 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 18
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 24
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 24
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 24
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+outline_size = 2
+outline_color = Color( 0.0901961, 0.0705882, 0.0627451, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 24
+font_data = ExtResource( 3 )
+
+[node name="bookshelf" type="Node2D"]
+
+[node name="bookshelf" type="Sprite" parent="."]
+position = Vector2( 515, 323 )
+scale = Vector2( 5.34375, 6.84375 )
+texture = ExtResource( 1 )
+
+[node name="book_one" type="Area2D" parent="."]
+position = Vector2( 375, 214 )
+scale = Vector2( 5.34375, 6.84375 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="book_one_collision" type="CollisionShape2D" parent="book_one"]
+position = Vector2( 3.8147e-06, 0 )
+shape = SubResource( 1 )
+
+[node name="book_two" type="Area2D" parent="."]
+position = Vector2( 427, 475 )
+scale = Vector2( 5.34375, 6.84375 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="book_two_collision" type="CollisionShape2D" parent="book_two"]
+position = Vector2( 6.45615, -2.11873 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="book_three" type="Area2D" parent="."]
+position = Vector2( 581, 343 )
+scale = Vector2( 5.34375, 6.84375 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="book_three_collision" type="CollisionShape2D" parent="book_three"]
+position = Vector2( 0, 0.146114 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="book_four" type="Area2D" parent="."]
+position = Vector2( 591, 452 )
+scale = Vector2( 5.34375, 6.84375 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="book_four"]
+position = Vector2( -3.7427, 0.0730515 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 10 )
+
+[node name="book_five" type="Area2D" parent="."]
+position = Vector2( 591, 452 )
+scale = Vector2( 5.34375, 6.84375 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="book_five"]
+position = Vector2( -29.0731, -16.7877 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 11 )
+
+[node name="book_six" type="Area2D" parent="."]
+position = Vector2( 591, 452 )
+scale = Vector2( 5.34375, 6.84375 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="book_six"]
+position = Vector2( -8.23393, -36.3836 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 11 )
+
+[node name="ui_panel" type="Control" parent="."]
+self_modulate = Color( 0.152941, 0.0117647, 0.0117647, 1 )
+margin_left = 21.0
+margin_top = 103.0
+margin_right = 343.0
+margin_bottom = 541.0
+mouse_filter = 2
+script = ExtResource( 2 )
+
+[node name="dialogue_panel" type="Panel" parent="ui_panel"]
+margin_left = -2.0
+margin_top = 3.0
+margin_right = 319.0
+margin_bottom = 440.0
+
+[node name="GridContainer" type="GridContainer" parent="ui_panel/dialogue_panel"]
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 707.0
+margin_bottom = 493.0
+columns = 2
+
+[node name="secret_code_label" type="Label" parent="ui_panel/dialogue_panel/GridContainer"]
+margin_top = 2.0
+margin_right = 188.0
+margin_bottom = 21.0
+custom_fonts/font = SubResource( 9 )
+text = "Enter The Secret Code"
+
+[node name="entry" type="LineEdit" parent="ui_panel/dialogue_panel/GridContainer"]
+margin_left = 192.0
+margin_right = 250.0
+margin_bottom = 24.0
+custom_colors/selection_color = Color( 0.647059, 0.513726, 0.513726, 1 )
+align = 1
+
+[node name="determine_placeholder" type="Label" parent="ui_panel/dialogue_panel/GridContainer"]
+margin_top = 28.0
+margin_right = 188.0
+margin_bottom = 52.0
+custom_fonts/font = SubResource( 13 )
+text = "W/L Placeholder"
+
+[node name="text_panel" type="Panel" parent="ui_panel"]
+margin_left = 14.0
+margin_top = 158.0
+margin_right = 305.0
+margin_bottom = 426.0
+
+[node name="dialogue_one" type="Label" parent="ui_panel/text_panel"]
+visible = false
+margin_left = -3.0
+margin_top = 2.0
+margin_right = 295.0
+margin_bottom = 215.0
+custom_fonts/font = SubResource( 6 )
+text = "Jeffery The Farmer
+Start
+-----------------------
+Jefferey the farmer was 
+a fun guy. 
+He was always nice to 
+his nieaces and 
+nephews.
+
+Code: 5"
+align = 1
+script = ExtResource( 5 )
+
+[node name="dialogue_two" type="Label" parent="ui_panel/text_panel"]
+visible = false
+margin_left = -3.0
+margin_top = 1.0
+margin_right = 293.0
+margin_bottom = 90.0
+custom_fonts/font = SubResource( 7 )
+text = "He also loved his farm, with many rabbits
+There wasn't much that Jeffery
+Hated
+
+Code: 2"
+align = 1
+autowrap = true
+script = ExtResource( 5 )
+
+[node name="dialogue_three" type="Label" parent="ui_panel/text_panel"]
+visible = false
+margin_left = -3.0
+margin_top = 1.0
+margin_right = 297.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 8 )
+text = "But Jefferey had a secret
+He hated rabbits
+
+Code: 1"
+align = 1
+script = ExtResource( 5 )
+
+[node name="dialogue_four" type="Label" parent="ui_panel/text_panel"]
+visible = false
+margin_left = -3.0
+margin_top = 1.0
+margin_right = 299.0
+margin_bottom = 106.0
+custom_fonts/font = SubResource( 8 )
+text = "When everyone was asleep
+he would go to the 
+rabbits shed and eat
+all of their carrots
+
+Code: 8"
+align = 1
+script = ExtResource( 5 )
+
+[node name="dialogue_five" type="Label" parent="ui_panel/text_panel"]
+visible = false
+margin_left = -3.0
+margin_top = 1.0
+margin_right = 299.0
+margin_bottom = 106.0
+custom_fonts/font = SubResource( 8 )
+text = "One day the rabbits
+decided to poison the 
+carrots when they
+heard jefferey was coming
+
+Code: 6"
+align = 1
+script = ExtResource( 5 )
+
+[node name="dialogue_six" type="Label" parent="ui_panel/text_panel"]
+visible = false
+margin_left = -11.0
+margin_top = 1.0
+margin_right = 310.0
+margin_bottom = 187.0
+custom_fonts/font = SubResource( 8 )
+text = "Jefferey shortly, passed 
+away and his nieces
+and nephews were sad
+but the rabbits ate
+carrot cake and celebrated
+--------------------------
+End
+
+Code: 1"
+align = 1
+script = ExtResource( 5 )
+
+[node name="dialogue_intro" type="Label" parent="ui_panel/text_panel"]
+margin_left = 10.0
+margin_top = 1.0
+margin_right = 294.0
+margin_bottom = 145.0
+custom_fonts/font = SubResource( 4 )
+text = "You found an old book 
+shelf maybe you can 
+find some hidden 
+message!! "
+align = 1
+
+[node name="search_button_intro" type="Button" parent="ui_panel/text_panel/dialogue_intro"]
+margin_left = 82.0
+margin_top = 94.0
+margin_right = 196.0
+margin_bottom = 116.0
+custom_colors/font_color = Color( 0.745098, 0.705882, 0.372549, 1 )
+custom_colors/font_color_hover = Color( 0.878431, 0.819608, 0.662745, 1 )
+custom_colors/font_color_pressed = Color( 0.247059, 0.145098, 0.0235294, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Search Books"
+
+[node name="instructions" type="Label" parent="ui_panel/text_panel"]
+margin_left = 29.0
+margin_top = -204.0
+margin_right = 631.0
+margin_bottom = -174.0
+custom_fonts/font = SubResource( 12 )
+text = "Put the story in order to figure out the secret code
+!!Hover the mouse above the books!!"
+align = 1
+
+[connection signal="view" from="book_one" to="ui_panel/text_panel/dialogue_one" method="_on_book_view"]
+[connection signal="view" from="book_two" to="ui_panel/text_panel/dialogue_two" method="_on_book_view"]
+[connection signal="view" from="book_three" to="ui_panel/text_panel/dialogue_three" method="_on_book_view"]
+[connection signal="view" from="book_four" to="ui_panel/text_panel/dialogue_four" method="_on_book_view"]
+[connection signal="view" from="book_five" to="ui_panel/text_panel/dialogue_five" method="_on_book_view"]
+[connection signal="view" from="book_six" to="ui_panel/text_panel/dialogue_six" method="_on_book_view"]
+[connection signal="text_entered" from="ui_panel/dialogue_panel/GridContainer/entry" to="ui_panel" method="_on_LineEdit_text_entered"]
+[connection signal="pressed" from="ui_panel/text_panel/dialogue_intro/search_button_intro" to="ui_panel" method="_on_search_button_intro_pressed"]
