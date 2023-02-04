@@ -8,6 +8,22 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Toy",
+"language": "GDScript",
+"path": "res://scenes/toys/toy.gd"
+}, {
+"base": "Node2D",
+"class": "Toybox",
+"language": "GDScript",
+"path": "res://scripts/toybox.gd"
+} ]
+_global_script_class_icons={
+"Toy": "",
+"Toybox": ""
+}
+
 [application]
 
 config/name="Attic Game"
