@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/kai.png-9e407647307b03e8f6491982bc557e2f.stex"
+path="res://.import/Bookshelf.png-3b747bb0295ad371bea6d8b1e26e0f14.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kai.png"
-dest_files=[ "res://.import/kai.png-9e407647307b03e8f6491982bc557e2f.stex" ]
+source_file="res://assets/Bookshelf.png"
+dest_files=[ "res://.import/Bookshelf.png-3b747bb0295ad371bea6d8b1e26e0f14.stex" ]
 
 [params]
 
