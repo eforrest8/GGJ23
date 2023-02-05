@@ -7,6 +7,7 @@ var currentBox = null
 var boxes: Dictionary
 
 func openBox(name):
+	visible = true
 	if not boxes.has(name):
 		boxes[name] = load(str("res://scenes/", name, ".tscn")).instance()
 	if currentBox == null:
@@ -14,6 +15,7 @@ func openBox(name):
 		add_child(currentBox)
 
 func closeBox():
+	visible = false
 	remove_child(currentBox)
 	currentBox = null
 
