@@ -5,9 +5,9 @@
 [ext_resource path="res://assets/Bookshelf.png" type="Texture" id=3]
 [ext_resource path="res://scenes/bookshelf.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/map_attic_script.gd" type="Script" id=5]
+[ext_resource path="res://scenes/inventory.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/portrait_img_instance.png" type="Texture" id=7]
 [ext_resource path="res://fonts/c-cari-pakpol-font/CariPakpol-d9jBX.otf" type="DynamicFontData" id=8]
-[ext_resource path="res://scenes/multi_box_test.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scripts/player_area_entered.gd" type="Script" id=10]
 [ext_resource path="res://assets/Interior free/interior free/interior free.png" type="Texture" id=11]
 [ext_resource path="res://scripts/popup_scripts.gd" type="Script" id=12]
@@ -117,7 +117,6 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="objects/portrait_img_instance/portrait_area"]
 position = Vector2( 0.762695, -1.65469 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 5 )
 
 [node name="table" type="TileMap" parent="objects"]
@@ -165,29 +164,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="inventory" parent="." instance=ExtResource( 9 )]
-margin_left = 20.0
-margin_top = -4.0
-margin_right = 20.0
-margin_bottom = -4.0
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="attic_ui_panel" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
+mouse_filter = 1
 
 [node name="candle_popup" type="PopupDialog" parent="attic_ui_panel"]
 margin_left = 400.0
 margin_top = 225.0
 margin_right = 529.0
 margin_bottom = 315.0
+mouse_filter = 1
 script = ExtResource( 12 )
 
 [node name="Label" type="Label" parent="attic_ui_panel/candle_popup"]
 margin_right = 93.0
 margin_bottom = 86.0
+mouse_filter = 1
 text = "This attic is dark
 Heres a candle
 Try and find what's
@@ -200,12 +193,14 @@ margin_left = 567.0
 margin_top = 351.0
 margin_right = 661.0
 margin_bottom = 441.0
+mouse_filter = 1
 script = ExtResource( 12 )
 
 [node name="Label" type="Label" parent="attic_ui_panel/gandma_ring_popup"]
 margin_right = 101.0
 margin_bottom = 86.0
 rect_scale = Vector2( 0.92, 1 )
+mouse_filter = 1
 text = "You found 
 Grandma
 Luca's Ring
@@ -223,6 +218,7 @@ margin_left = -19.0
 margin_top = 20.0
 margin_right = 39.0
 margin_bottom = 42.0
+mouse_filter = 1
 custom_fonts/font = SubResource( 6 )
 text = "Exit"
 
@@ -234,6 +230,7 @@ margin_left = 6.0
 margin_top = 77.0
 margin_right = 93.0
 margin_bottom = 97.0
+mouse_filter = 1
 text = "Exit"
 
 [node name="left_wall" type="StaticBody2D" parent="."]
@@ -280,10 +277,13 @@ __meta__ = {
 position = Vector2( 1.90735e-06, 2 )
 shape = SubResource( 1 )
 
+[node name="inventory" parent="." instance=ExtResource( 6 )]
+visible = false
+
 [connection signal="body_entered" from="objects/bookshelf_img/bs_floor_interact" to="." method="_on_bs_floor_interact_body_entered"]
 [connection signal="body_exited" from="objects/bookshelf_img/bs_floor_interact" to="." method="_on_bs_floor_interact_body_exited"]
 [connection signal="body_entered" from="objects/portrait_img_instance/portrait_area" to="." method="_on_portrait_area_body_entered"]
 [connection signal="popup" from="objects/table/table_area" to="attic_ui_panel/candle_popup" method="_on_player_entered"]
-[connection signal="popup" from="objects/grandma_ring_are" to="attic_ui_panel/gandma_ring_popup" method="_on_player_entered"]
+[connection signal="body_entered" from="objects/grandma_ring_are" to="." method="_on_grandma_ring_are_body_entered"]
 [connection signal="pressed" from="family_quiz_scene/exit_family_scene" to="." method="_on_exit_family_scene_pressed"]
 [connection signal="pressed" from="bookshelf_scene/exit_button" to="." method="_on_exit_button_pressed"]

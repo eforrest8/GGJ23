@@ -1,0 +1,176 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://scenes/toys/toy.gd" type="Script" id=1]
+[ext_resource path="res://scripts/toybox.gd" type="Script" id=2]
+[ext_resource path="res://assets/objects/poem/poem-text-7.png" type="Texture" id=3]
+[ext_resource path="res://assets/objects/poem/poem-text-2.png" type="Texture" id=4]
+[ext_resource path="res://assets/objects/ball-of-yarn-red.png" type="Texture" id=5]
+[ext_resource path="res://assets/objects/poem/poem-text-6.png" type="Texture" id=6]
+[ext_resource path="res://assets/objects/poem/poem-text-10.png" type="Texture" id=7]
+[ext_resource path="res://assets/objects/poem/poem-text-8.png" type="Texture" id=8]
+[ext_resource path="res://assets/objects/poem/poem-text-9.png" type="Texture" id=9]
+[ext_resource path="res://assets/objects/poem/poem-text-5.png" type="Texture" id=10]
+[ext_resource path="res://assets/objects/poem/poem-text-4.png" type="Texture" id=11]
+[ext_resource path="res://assets/objects/poem/poem-text-3.png" type="Texture" id=12]
+[ext_resource path="res://assets/objects/poem/poem-text-11.png" type="Texture" id=13]
+[ext_resource path="res://assets/objects/poem/poem-text-1.png" type="Texture" id=14]
+[ext_resource path="res://assets/objects/silver-green-ring.png" type="Texture" id=15]
+[ext_resource path="res://assets/objects/half-eaten-carrot.png" type="Texture" id=16]
+[ext_resource path="res://assets/objects/rusty-key.png" type="Texture" id=17]
+[ext_resource path="res://assets/objects/silver-red-ring.png" type="Texture" id=18]
+[ext_resource path="res://assets/objects/old-photo-barn-silo.png" type="Texture" id=19]
+[ext_resource path="res://assets/objects/old-photo-person-sitting.png" type="Texture" id=20]
+
+[node name="Toybox" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Paper Scrap 1" type="Sprite" parent="."]
+position = Vector2( 193, 382 )
+rotation = -0.774926
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+centered = false
+offset = Vector2( -256, -64 )
+region_rect = Rect2( 0, 0, 512, 512 )
+script = ExtResource( 1 )
+
+[node name="Paper Scrap 2" type="Sprite" parent="."]
+position = Vector2( 336, 306 )
+rotation = -4.18879
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+centered = false
+offset = Vector2( -512, -64 )
+region_rect = Rect2( 0, 0, 512, 512 )
+script = ExtResource( 1 )
+
+[node name="Paper Scrap 3" type="Sprite" parent="."]
+position = Vector2( 162.008, 282.442 )
+rotation = -0.93026
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+offset = Vector2( 170.187, 307.163 )
+region_rect = Rect2( 0, 0, 512, 512 )
+script = ExtResource( 1 )
+
+[node name="Paper Scrap 4" type="Sprite" parent="."]
+position = Vector2( 445, 99 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+offset = Vector2( -40, 282 )
+region_rect = Rect2( 0, 0, 512, 512 )
+script = ExtResource( 1 )
+
+[node name="Paper Scrap 5" type="Sprite" parent="."]
+position = Vector2( 417.981, 464.875 )
+rotation = -2.79253
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+offset = Vector2( 198.75, 179.51 )
+region_rect = Rect2( 0, 0, 512, 512 )
+script = ExtResource( 1 )
+
+[node name="Paper Scrap 6" type="Sprite" parent="."]
+position = Vector2( 201.606, 343.253 )
+rotation = -0.93026
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+offset = Vector2( -11.6284, 42.9813 )
+region_rect = Rect2( 0, 0, 512, 512 )
+script = ExtResource( 1 )
+
+[node name="Paper Scrap 7" type="Sprite" parent="."]
+position = Vector2( 422.223, 150.92 )
+rotation = 1.24093
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+offset = Vector2( 173.58, 63.6153 )
+region_rect = Rect2( 0, 0, 512, 512 )
+script = ExtResource( 1 )
+
+[node name="Paper Scrap 8" type="Sprite" parent="."]
+position = Vector2( 419.395, 433.763 )
+rotation = 3.41386
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+offset = Vector2( 229.361, 1.25931 )
+region_rect = Rect2( 0, 0, 512, 512 )
+script = ExtResource( 1 )
+
+[node name="Paper Scrap 9" type="Sprite" parent="."]
+position = Vector2( 560, 489 )
+rotation = 0.848623
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+offset = Vector2( 100, -160 )
+region_rect = Rect2( 0, 0, 512, 512 )
+script = ExtResource( 1 )
+
+[node name="Paper Scrap 10" type="Sprite" parent="."]
+position = Vector2( 220, 476 )
+rotation = -1.26786
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+offset = Vector2( 232, -340 )
+region_rect = Rect2( 0, 0, 512, 512 )
+script = ExtResource( 1 )
+
+[node name="Paper Scrap 11" type="Sprite" parent="."]
+position = Vector2( 567, 117 )
+rotation = -2.13237
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+offset = Vector2( 22, -346 )
+region_rect = Rect2( 0, 0, 512, 512 )
+script = ExtResource( 1 )
+
+[node name="Yarn" type="Sprite" parent="."]
+position = Vector2( 486, 107 )
+rotation = -1.26975
+scale = Vector2( 0.439453, 0.427734 )
+texture = ExtResource( 5 )
+script = ExtResource( 1 )
+
+[node name="Carrot" type="Sprite" parent="."]
+position = Vector2( 152, 118 )
+rotation = -2.22211
+scale = Vector2( 0.439453, 0.427734 )
+texture = ExtResource( 16 )
+script = ExtResource( 1 )
+
+[node name="Rusty Key" type="Sprite" parent="."]
+position = Vector2( 464, 426 )
+rotation = -0.949571
+scale = Vector2( 0.575589, 0.596191 )
+texture = ExtResource( 17 )
+script = ExtResource( 1 )
+
+[node name="Doll\'s Old Ring" type="Sprite" parent="."]
+position = Vector2( 254, 299 )
+rotation = -0.949571
+scale = Vector2( 0.293726, 0.256152 )
+texture = ExtResource( 15 )
+script = ExtResource( 1 )
+
+[node name="Grandma\'s Luca\'s Ring" type="Sprite" parent="."]
+position = Vector2( 201, 423 )
+rotation = -1.28968
+scale = Vector2( 0.256517, 0.250043 )
+texture = ExtResource( 18 )
+script = ExtResource( 1 )
+
+[node name="Photo of Grandpa Jeffrey" type="Sprite" parent="."]
+position = Vector2( 588, 277 )
+scale = Vector2( 0.363281, 0.337891 )
+texture = ExtResource( 20 )
+script = ExtResource( 1 )
+
+[node name="Photo of Rabbit\'s Barn" type="Sprite" parent="."]
+position = Vector2( 143, 287 )
+rotation = 1.84871
+scale = Vector2( 0.400391, 0.4375 )
+texture = ExtResource( 19 )
+script = ExtResource( 1 )
+
+[connection signal="child_entered_tree" from="." to="." method="_on_Toybox_child_entered_tree"]
+[connection signal="child_exiting_tree" from="." to="." method="_on_Toybox_child_exiting_tree"]

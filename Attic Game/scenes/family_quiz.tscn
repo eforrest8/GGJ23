@@ -15,6 +15,7 @@ margin_left = 78.0
 margin_top = 473.0
 margin_right = 210.0
 margin_bottom = 513.0
+mouse_filter = 1
 text = "Showing"
 
 [node name="ui_panel" type="Control" parent="."]
@@ -22,6 +23,7 @@ margin_left = 242.0
 margin_top = 415.0
 margin_right = 473.0
 margin_bottom = 503.0
+mouse_filter = 1
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -33,6 +35,7 @@ margin_left = -8.0
 margin_top = -10.0
 margin_right = 235.0
 margin_bottom = 116.0
+mouse_filter = 1
 
 [node name="GridContainer" type="GridContainer" parent="ui_panel"]
 margin_right = 40.0
@@ -43,12 +46,14 @@ columns = 3
 margin_top = 5.0
 margin_right = 138.0
 margin_bottom = 19.0
+mouse_filter = 1
 text = "Who is Jeffery to you?"
 
 [node name="jeff_ans" type="LineEdit" parent="ui_panel/GridContainer"]
 margin_left = 142.0
 margin_right = 200.0
 margin_bottom = 24.0
+mouse_filter = 1
 expand_to_text_length = true
 
 [node name="jeff_holder" type="Label" parent="ui_panel/GridContainer"]
@@ -56,11 +61,13 @@ margin_left = 204.0
 margin_top = 5.0
 margin_right = 227.0
 margin_bottom = 19.0
+mouse_filter = 1
 
 [node name="chuck_ques" type="Label" parent="ui_panel/GridContainer"]
 margin_top = 33.0
 margin_right = 138.0
 margin_bottom = 47.0
+mouse_filter = 1
 text = "Who is Cannit to you?"
 
 [node name="chuck_ans" type="LineEdit" parent="ui_panel/GridContainer"]
@@ -68,6 +75,7 @@ margin_left = 142.0
 margin_top = 28.0
 margin_right = 200.0
 margin_bottom = 52.0
+mouse_filter = 1
 expand_to_text_length = true
 
 [node name="chuck_holder" type="Label" parent="ui_panel/GridContainer"]
@@ -75,11 +83,13 @@ margin_left = 204.0
 margin_top = 33.0
 margin_right = 227.0
 margin_bottom = 47.0
+mouse_filter = 1
 
 [node name="doll_ques" type="Label" parent="ui_panel/GridContainer"]
 margin_top = 61.0
 margin_right = 138.0
 margin_bottom = 75.0
+mouse_filter = 1
 text = "Who is Doll to you?"
 
 [node name="doll_ans" type="LineEdit" parent="ui_panel/GridContainer"]
@@ -87,6 +97,7 @@ margin_left = 142.0
 margin_top = 56.0
 margin_right = 200.0
 margin_bottom = 80.0
+mouse_filter = 1
 expand_to_text_length = true
 
 [node name="doll_holder" type="Label" parent="ui_panel/GridContainer"]
@@ -94,11 +105,13 @@ margin_left = 204.0
 margin_top = 61.0
 margin_right = 227.0
 margin_bottom = 75.0
+mouse_filter = 1
 
 [node name="luca_ques" type="Label" parent="ui_panel/GridContainer"]
 margin_top = 89.0
 margin_right = 138.0
 margin_bottom = 103.0
+mouse_filter = 1
 text = "Who is Luca to you?"
 
 [node name="luca_ans" type="LineEdit" parent="ui_panel/GridContainer"]
@@ -106,6 +119,7 @@ margin_left = 142.0
 margin_top = 84.0
 margin_right = 200.0
 margin_bottom = 108.0
+mouse_filter = 1
 expand_to_text_length = true
 
 [node name="luca_holder" type="Label" parent="ui_panel/GridContainer"]
@@ -113,6 +127,7 @@ margin_left = 204.0
 margin_top = 89.0
 margin_right = 227.0
 margin_bottom = 103.0
+mouse_filter = 1
 text = "hey"
 
 [connection signal="toggled" from="hidenshow" to="ui_panel" method="_on_hidenshow_toggled"]
