@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/map.png-dfba05084e3346587240e6093ee94fb2.stex"
+path="res://.import/kai.png-f84bcbc590482c9bd9afaf49d0d5cca2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/map.png"
-dest_files=[ "res://.import/map.png-dfba05084e3346587240e6093ee94fb2.stex" ]
+source_file="res://assets/profile_img_paint/kai.png"
+dest_files=[ "res://.import/kai.png-f84bcbc590482c9bd9afaf49d0d5cca2.stex" ]
 
 [params]
 

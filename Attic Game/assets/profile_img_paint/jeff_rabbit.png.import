@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jeff_rabbit.png-1b5c2e02cd4a8ab701d0070391054ede.stex"
+path="res://.import/jeff_rabbit.png-5436df851ec72c633cdd87425080354a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/jeff_rabbit.png"
-dest_files=[ "res://.import/jeff_rabbit.png-1b5c2e02cd4a8ab701d0070391054ede.stex" ]
+source_file="res://assets/profile_img_paint/jeff_rabbit.png"
+dest_files=[ "res://.import/jeff_rabbit.png-5436df851ec72c633cdd87425080354a.stex" ]
 
 [params]
 

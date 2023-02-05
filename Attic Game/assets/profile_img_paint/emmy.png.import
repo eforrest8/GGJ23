@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/emmy.png-b50d5573de1b6aa164779332c059a932.stex"
+path="res://.import/emmy.png-35fde7bdbd6b2deae85155e0d125637b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/emmy.png"
-dest_files=[ "res://.import/emmy.png-b50d5573de1b6aa164779332c059a932.stex" ]
+source_file="res://assets/profile_img_paint/emmy.png"
+dest_files=[ "res://.import/emmy.png-35fde7bdbd6b2deae85155e0d125637b.stex" ]
 
 [params]
 
