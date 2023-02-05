@@ -15,24 +15,24 @@ margin_bottom = 1.0
 mouse_filter = 1
 
 [node name="Button" type="Button" parent="."]
-margin_left = 873.0
-margin_top = 46.0
-margin_right = 956.0
-margin_bottom = 66.0
+margin_left = 625.0
+margin_top = 16.0
+margin_right = 708.0
+margin_bottom = 36.0
 text = "open box 1"
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 878.0
-margin_top = 136.0
-margin_right = 961.0
-margin_bottom = 156.0
+margin_left = 628.0
+margin_top = 51.0
+margin_right = 711.0
+margin_bottom = 71.0
 text = "open box 2"
 
 [node name="Button3" type="Button" parent="."]
-margin_left = 910.0
-margin_top = 543.0
-margin_right = 985.0
-margin_bottom = 563.0
+margin_left = 635.0
+margin_top = 566.0
+margin_right = 710.0
+margin_bottom = 586.0
 text = "Close Box"
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_box1_pressed"]

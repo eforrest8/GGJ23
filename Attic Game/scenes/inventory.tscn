@@ -14,21 +14,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-margin_left = 25.0
-margin_top = 27.0
-margin_right = 169.0
-margin_bottom = 572.0
-
-[node name="ItemList" type="ItemList" parent="MarginContainer"]
-margin_right = 144.0
-margin_bottom = 545.0
-allow_reselect = true
+[node name="ItemList" type="ItemList" parent="."]
+margin_left = 4.0
+margin_top = 24.0
+margin_right = 100.0
+margin_bottom = 576.0
+auto_height = true
+fixed_column_width = 84
 icon_mode = 0
 fixed_icon_size = Vector2( 64, 64 )
 script = ExtResource( 2 )
 
-[node name="List Noise" type="Sprite" parent="MarginContainer/ItemList"]
+[node name="List Noise" type="Sprite" parent="ItemList"]
 position = Vector2( 249, 241 )
 scale = Vector2( 0.25293, 0.28125 )
 texture = SubResource( 2 )
@@ -36,6 +33,6 @@ script = ExtResource( 1 )
 
 [connection signal="child_entered_tree" from="." to="." method="_on_Control_child_entered_tree"]
 [connection signal="child_exiting_tree" from="." to="." method="_on_Control_child_exiting_tree"]
-[connection signal="child_entered_tree" from="MarginContainer/ItemList" to="MarginContainer/ItemList" method="_on_ItemList_child_entered_tree"]
-[connection signal="child_exiting_tree" from="MarginContainer/ItemList" to="MarginContainer/ItemList" method="_on_ItemList_child_exiting_tree"]
-[connection signal="item_selected" from="MarginContainer/ItemList" to="MarginContainer/ItemList" method="_on_ItemList_item_selected"]
+[connection signal="child_entered_tree" from="ItemList" to="ItemList" method="_on_ItemList_child_entered_tree"]
+[connection signal="child_exiting_tree" from="ItemList" to="ItemList" method="_on_ItemList_child_exiting_tree"]
+[connection signal="item_selected" from="ItemList" to="ItemList" method="_on_ItemList_item_selected"]
