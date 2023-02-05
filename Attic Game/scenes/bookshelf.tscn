@@ -150,8 +150,8 @@ margin_bottom = 440.0
 [node name="GridContainer" type="GridContainer" parent="ui_panel/dialogue_panel"]
 margin_left = 4.0
 margin_top = 5.0
-margin_right = 707.0
-margin_bottom = 493.0
+margin_right = 320.0
+margin_bottom = 74.0
 columns = 2
 
 [node name="secret_code_label" type="Label" parent="ui_panel/dialogue_panel/GridContainer"]
@@ -254,7 +254,7 @@ margin_top = 1.0
 margin_right = 299.0
 margin_bottom = 106.0
 custom_fonts/font = SubResource( 8 )
-text = "One day the rabbits
+text = "So one day the rabbits
 decided to poison the 
 carrots when they
 heard jefferey was coming
@@ -306,12 +306,13 @@ custom_fonts/font = SubResource( 5 )
 text = "Search Books"
 
 [node name="instructions" type="Label" parent="ui_panel/text_panel"]
-margin_left = 29.0
-margin_top = -204.0
-margin_right = 631.0
-margin_bottom = -174.0
+margin_left = 23.0
+margin_top = -235.0
+margin_right = 625.0
+margin_bottom = -157.0
 custom_fonts/font = SubResource( 12 )
 text = "Put the story in order to figure out the secret code
+There are 6 pages
 !!Hover the mouse above the books!!"
 align = 1
 

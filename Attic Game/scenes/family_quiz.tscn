@@ -1,36 +1,38 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/family_frame.png" type="Texture" id=1]
+[ext_resource path="res://assets/scene_img/family_frame.png" type="Texture" id=1]
 [ext_resource path="res://scripts/family_ui_panel.gd" type="Script" id=2]
 
-[node name="Node2D" type="Node2D"]
+[node name="family_quiz" type="Node2D"]
 
 [node name="bg" type="Sprite" parent="."]
-position = Vector2( 361, 300 )
-scale = Vector2( 0.733211, 1.16304 )
+position = Vector2( 333, 286 )
+scale = Vector2( 0.706044, 1.12717 )
 texture = ExtResource( 1 )
 
-[node name="hidenshow" type="CheckButton" parent="."]
-margin_left = 82.0
-margin_top = 56.0
-margin_right = 158.0
-margin_bottom = 96.0
+[node name="hidenshow" type="CheckBox" parent="."]
+margin_left = 78.0
+margin_top = 473.0
+margin_right = 210.0
+margin_bottom = 513.0
+text = "Showing"
 
 [node name="ui_panel" type="Control" parent="."]
-margin_left = 90.0
-margin_top = 121.0
-margin_right = 321.0
-margin_bottom = 209.0
+margin_left = 242.0
+margin_top = 415.0
+margin_right = 473.0
+margin_bottom = 503.0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Panel" type="Panel" parent="ui_panel"]
+modulate = Color( 1, 1, 1, 0.898039 )
 margin_left = -8.0
 margin_top = -10.0
 margin_right = 235.0
-margin_bottom = 91.0
+margin_bottom = 116.0
 
 [node name="GridContainer" type="GridContainer" parent="ui_panel"]
 margin_right = 40.0
@@ -39,61 +41,82 @@ columns = 3
 
 [node name="jeff_ques" type="Label" parent="ui_panel/GridContainer"]
 margin_top = 5.0
-margin_right = 137.0
+margin_right = 138.0
 margin_bottom = 19.0
 text = "Who is Jeffery to you?"
 
 [node name="jeff_ans" type="LineEdit" parent="ui_panel/GridContainer"]
-margin_left = 141.0
-margin_right = 199.0
+margin_left = 142.0
+margin_right = 200.0
 margin_bottom = 24.0
 expand_to_text_length = true
 
 [node name="jeff_holder" type="Label" parent="ui_panel/GridContainer"]
-margin_left = 203.0
+margin_left = 204.0
 margin_top = 5.0
-margin_right = 203.0
+margin_right = 227.0
 margin_bottom = 19.0
 
 [node name="chuck_ques" type="Label" parent="ui_panel/GridContainer"]
 margin_top = 33.0
-margin_right = 137.0
+margin_right = 138.0
 margin_bottom = 47.0
-text = "Who is Chuck to you?"
+text = "Who is Cannit to you?"
 
 [node name="chuck_ans" type="LineEdit" parent="ui_panel/GridContainer"]
-margin_left = 141.0
+margin_left = 142.0
 margin_top = 28.0
-margin_right = 199.0
+margin_right = 200.0
 margin_bottom = 52.0
 expand_to_text_length = true
 
 [node name="chuck_holder" type="Label" parent="ui_panel/GridContainer"]
-margin_left = 203.0
+margin_left = 204.0
 margin_top = 33.0
-margin_right = 203.0
+margin_right = 227.0
 margin_bottom = 47.0
 
 [node name="doll_ques" type="Label" parent="ui_panel/GridContainer"]
 margin_top = 61.0
-margin_right = 137.0
+margin_right = 138.0
 margin_bottom = 75.0
 text = "Who is Doll to you?"
 
 [node name="doll_ans" type="LineEdit" parent="ui_panel/GridContainer"]
-margin_left = 141.0
+margin_left = 142.0
 margin_top = 56.0
-margin_right = 199.0
+margin_right = 200.0
 margin_bottom = 80.0
 expand_to_text_length = true
 
 [node name="doll_holder" type="Label" parent="ui_panel/GridContainer"]
-margin_left = 203.0
+margin_left = 204.0
 margin_top = 61.0
-margin_right = 203.0
+margin_right = 227.0
 margin_bottom = 75.0
+
+[node name="luca_ques" type="Label" parent="ui_panel/GridContainer"]
+margin_top = 89.0
+margin_right = 138.0
+margin_bottom = 103.0
+text = "Who is Luca to you?"
+
+[node name="luca_ans" type="LineEdit" parent="ui_panel/GridContainer"]
+margin_left = 142.0
+margin_top = 84.0
+margin_right = 200.0
+margin_bottom = 108.0
+expand_to_text_length = true
+
+[node name="luca_holder" type="Label" parent="ui_panel/GridContainer"]
+margin_left = 204.0
+margin_top = 89.0
+margin_right = 227.0
+margin_bottom = 103.0
+text = "hey"
 
 [connection signal="toggled" from="hidenshow" to="ui_panel" method="_on_hidenshow_toggled"]
 [connection signal="text_entered" from="ui_panel/GridContainer/jeff_ans" to="ui_panel" method="_on_jeff_ans_text_entered"]
 [connection signal="text_entered" from="ui_panel/GridContainer/chuck_ans" to="ui_panel" method="_on_chuck_ans_text_entered"]
 [connection signal="text_entered" from="ui_panel/GridContainer/doll_ans" to="ui_panel" method="_on_doll_ans_text_entered"]
+[connection signal="text_entered" from="ui_panel/GridContainer/luca_ans" to="ui_panel" method="_on_luca_ans_text_entered"]

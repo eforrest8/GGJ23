@@ -26,3 +26,6 @@ func _on_Control_child_exiting_tree(node):
 	if node is Toybox:
 		node.disconnect("store", itemList, "_on_item_store")
 		itemList.disconnect("retrieve", node, "_on_item_retrieve")
+
+
+

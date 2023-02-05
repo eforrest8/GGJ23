@@ -1,16 +1,73 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=22 format=2]
 
-[ext_resource path="res://assets/map.png" type="Texture" id=1]
+[ext_resource path="res://assets/scene_img/map.png" type="Texture" id=1]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Bookshelf.png" type="Texture" id=3]
 [ext_resource path="res://scenes/bookshelf.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/map_attic_script.gd" type="Script" id=5]
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 28.3218, 17.9231 )
+[ext_resource path="res://assets/portrait_img_instance.png" type="Texture" id=7]
+[ext_resource path="res://fonts/c-cari-pakpol-font/CariPakpol-d9jBX.otf" type="DynamicFontData" id=8]
+[ext_resource path="res://scenes/multi_box_test.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scripts/player_area_entered.gd" type="Script" id=10]
+[ext_resource path="res://assets/Interior free/interior free/interior free.png" type="Texture" id=11]
+[ext_resource path="res://scripts/popup_scripts.gd" type="Script" id=12]
+[ext_resource path="res://assets/scene_img/closed_box.png" type="Texture" id=13]
+[ext_resource path="res://scenes/family_quiz.tscn" type="PackedScene" id=14]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 27.2184, 10.3462 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 408.737, 70.3597 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( 40, 12.396, 0, 12.396, 0, 0, 40, 0 )
+
+[sub_resource type="TileSet" id=8]
+2/name = "closed_box.png 2"
+2/texture = ExtResource( 13 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 257, 131, 71, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "interior free.png 3"
+3/texture = ExtResource( 11 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 11, 40, 29 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 14 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 14 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 52, 32.5 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 55, 55 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 8 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24.5, 355 )
@@ -20,70 +77,191 @@ modulate = Color( 0.898039, 0.870588, 0.827451, 1 )
 script = ExtResource( 5 )
 
 [node name="map_bg" type="Sprite" parent="."]
-modulate = Color( 0.4, 0.356863, 0.356863, 1 )
-light_mask = 512
+modulate = Color( 0.290196, 0.227451, 0.227451, 1 )
+light_mask = 513
 position = Vector2( 364.125, 299.25 )
 scale = Vector2( 0.888583, 1.31196 )
 texture = ExtResource( 1 )
-normal_map = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="objects" type="Node2D" parent="."]
 modulate = Color( 0.752941, 0.682353, 0.682353, 1 )
 
 [node name="bookshelf_img" type="Sprite" parent="objects"]
-position = Vector2( 680, 46 )
-scale = Vector2( 1.35937, 1.625 )
+position = Vector2( 633.75, 109.5 )
+scale = Vector2( 2.80469, 3.60937 )
 texture = ExtResource( 3 )
-
-[node name="bookshelf_static" type="StaticBody2D" parent="objects/bookshelf_img"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="objects/bookshelf_img/bookshelf_static"]
-position = Vector2( -2.57471, -7.92308 )
-shape = SubResource( 2 )
 
 [node name="bs_floor_interact" type="Area2D" parent="objects/bookshelf_img"]
 position = Vector2( -19.8621, 33.8462 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="objects/bookshelf_img/bs_floor_interact"]
-position = Vector2( 18.3907, -6.65385 )
+position = Vector2( 19.9512, 0.0932388 )
 shape = SubResource( 3 )
+
+[node name="portrait_img_instance" type="Sprite" parent="objects"]
+position = Vector2( 120, 101 )
+scale = Vector2( 0.232296, 0.329348 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="portrait_area" type="Area2D" parent="objects/portrait_img_instance"]
+position = Vector2( 0.615906, 371.209 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="objects/portrait_img_instance/portrait_area"]
+position = Vector2( 0.762695, -1.65469 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 5 )
+
+[node name="table" type="TileMap" parent="objects"]
+scale = Vector2( 2, 2 )
+tile_set = SubResource( 8 )
+cell_size = Vector2( 32, 32 )
+cell_tile_origin = 1
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( 327685, 3, 0, 458762, 2, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="table_area" type="Area2D" parent="objects/table"]
+position = Vector2( 160.5, 162.5 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="objects/table/table_area"]
+position = Vector2( 31, 25.5 )
+shape = SubResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="grandma_ring_are" type="Area2D" parent="objects"]
+position = Vector2( 624, 437 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="objects/grandma_ring_are"]
+position = Vector2( 28, 27 )
+shape = SubResource( 12 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 359, 248 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="inventory" parent="." instance=ExtResource( 9 )]
+margin_left = 20.0
+margin_top = -4.0
+margin_right = 20.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="attic_ui_panel" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="candle_popup" type="PopupDialog" parent="attic_ui_panel"]
+margin_left = 400.0
+margin_top = 225.0
+margin_right = 529.0
+margin_bottom = 315.0
+script = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="attic_ui_panel/candle_popup"]
+margin_right = 93.0
+margin_bottom = 86.0
+text = "This attic is dark
+Heres a candle
+Try and find what's
+up here"
+align = 1
+valign = 1
+
+[node name="gandma_ring_popup" type="PopupDialog" parent="attic_ui_panel"]
+margin_left = 567.0
+margin_top = 351.0
+margin_right = 661.0
+margin_bottom = 441.0
+script = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="attic_ui_panel/gandma_ring_popup"]
+margin_right = 101.0
+margin_bottom = 86.0
+rect_scale = Vector2( 0.92, 1 )
+text = "You found 
+Grandma
+Luca's Ring
+Check your 
+inventory!!"
+align = 1
+valign = 1
+
+[node name="family_quiz_scene" parent="." instance=ExtResource( 14 )]
+visible = false
+position = Vector2( 38, 6 )
+
+[node name="exit_family_scene" type="Button" parent="family_quiz_scene"]
+margin_left = -19.0
+margin_top = 20.0
+margin_right = 39.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 6 )
+text = "Exit"
 
 [node name="bookshelf_scene" parent="." instance=ExtResource( 4 )]
 visible = false
 
 [node name="exit_button" type="Button" parent="bookshelf_scene"]
-margin_left = 23.0
-margin_top = 26.0
-margin_right = 110.0
-margin_bottom = 46.0
+margin_left = 6.0
+margin_top = 77.0
+margin_right = 93.0
+margin_bottom = 97.0
 text = "Exit"
 
 [node name="left_wall" type="StaticBody2D" parent="."]
-position = Vector2( -19, 297 )
+position = Vector2( -19, 541 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="left_wall_collision" type="CollisionShape2D" parent="left_wall"]
 shape = SubResource( 1 )
 
 [node name="right_wall" type="StaticBody2D" parent="."]
-position = Vector2( 745, 303 )
+position = Vector2( 745, 530 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="right_wall_collision" type="CollisionShape2D" parent="right_wall"]
 shape = SubResource( 1 )
 
 [node name="top_wall" type="StaticBody2D" parent="."]
-position = Vector2( 365, -25 )
+position = Vector2( 359, 149 )
 rotation = 1.5708
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="top_wall_collision" type="CollisionShape2D" parent="top_wall"]
@@ -94,7 +272,8 @@ shape = SubResource( 1 )
 position = Vector2( 365, 625 )
 rotation = 1.5708
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="bottom_wall_collision" type="CollisionShape2D" parent="bottom_wall"]
@@ -103,4 +282,8 @@ shape = SubResource( 1 )
 
 [connection signal="body_entered" from="objects/bookshelf_img/bs_floor_interact" to="." method="_on_bs_floor_interact_body_entered"]
 [connection signal="body_exited" from="objects/bookshelf_img/bs_floor_interact" to="." method="_on_bs_floor_interact_body_exited"]
+[connection signal="body_entered" from="objects/portrait_img_instance/portrait_area" to="." method="_on_portrait_area_body_entered"]
+[connection signal="popup" from="objects/table/table_area" to="attic_ui_panel/candle_popup" method="_on_player_entered"]
+[connection signal="popup" from="objects/grandma_ring_are" to="attic_ui_panel/gandma_ring_popup" method="_on_player_entered"]
+[connection signal="pressed" from="family_quiz_scene/exit_family_scene" to="." method="_on_exit_family_scene_pressed"]
 [connection signal="pressed" from="bookshelf_scene/exit_button" to="." method="_on_exit_button_pressed"]

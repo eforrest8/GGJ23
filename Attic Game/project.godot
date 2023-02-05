@@ -28,22 +28,36 @@ _global_script_classes=[ {
 "class": "dialogue",
 "language": "GDScript",
 "path": "res://scripts/text_script.gd"
+}, {
+"base": "Area2D",
+"class": "player_area_popup",
+"language": "GDScript",
+"path": "res://scripts/player_area_entered.gd"
+}, {
+"base": "PopupDialog",
+"class": "popup",
+"language": "GDScript",
+"path": "res://scripts/popup_scripts.gd"
 } ]
 _global_script_class_icons={
 "Book": "",
 "Toy": "",
 "Toybox": "",
-"dialogue": ""
+"dialogue": "",
+"player_area_popup": "",
+"popup": ""
 }
 
 [application]
 
 config/name="Attic Game"
+run/main_scene="res://scenes/start_menu.tscn"
 config/icon="res://icon.png"
 
 [display]
 
 window/size/width=720
+window/size/resizable=false
 
 [gui]
 

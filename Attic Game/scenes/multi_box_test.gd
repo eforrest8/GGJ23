@@ -22,3 +22,13 @@ func _on_Button2_pressed():
 func _on_Button3_pressed():
 	inventory.closeBox()
 	
+
+onready var show_inventory = $show_inventory
+func _on_CheckBox_toggled(button_pressed):
+	if button_pressed == true:
+		inventory.visible = false
+		show_inventory.set_text("Show Inventory")
+	else:
+		inventory.visible = true
+		show_inventory.set_text("Hide Inventory")
+		

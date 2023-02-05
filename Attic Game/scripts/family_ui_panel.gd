@@ -3,20 +3,18 @@ extends Control
 onready var jeff = get_node("GridContainer/jeff_ans")
 onready var jeff_holder = get_node("GridContainer/jeff_holder")
 
-onready var chuck = get_node("GridContainer/chuck_ans")
-onready var chuck_holder = get_node("GridContainer/chuck_holder")
+onready var cannit = get_node("GridContainer/chuck_ans")
+onready var cannit_holder = get_node("GridContainer/chuck_holder")
 
 onready var doll = get_node("GridContainer/doll_ans")
 onready var doll_holder = get_node("GridContainer/doll_holder")
 
-onready var ui_panel = get_node("ui_panel")
+onready var luca = get_node("GridContainer/luca_ans")
+onready var luca_holder = get_node("GridContainer/luca_holder")
 
-onready var hidnshow = get_node("hidenshow")
 
-#These check the input of the entry boxes. If correct the label tells you a green correct.
-# If incorrect the label tells you it is incorrect in red
-
-#check input for grandpa who is jeff
+#These are the inputs for the line edit
+#it checks the input to make sure it is correct
 func _on_jeff_ans_text_entered(new_text):
 	if jeff.get_text() == "grandpa":
 		jeff_holder.set_text("Correct")
@@ -25,18 +23,16 @@ func _on_jeff_ans_text_entered(new_text):
 		jeff_holder.set_text("Incorrect")
 		jeff_holder.modulate = Color(239,0,0)
 		jeff.clear()
-
-#CHeck input for the stepfather who is chuck
-func _on_chuck_ans_text_entered(new_text):
-	if chuck.get_text() == "step father":
-		chuck_holder.set_text("Correct")
-		chuck_holder.modulate = Color(0,239,0)
-	else: 
-		chuck_holder.set_text("Incorrect")
-		chuck_holder.modulate = Color(239,0,0)
-		chuck.clear()
 		
-		#check input for doll who is the sister
+func _on_chuck_ans_text_entered(new_text):
+	if cannit.get_text() == "uncle":
+		cannit_holder.set_text("Correct")
+		cannit_holder.modulate = Color(0,239,0)
+	else: 
+		cannit_holder.set_text("Incorrect")
+		cannit_holder.modulate = Color(239,0,0)
+		cannit.clear()
+		
 func _on_doll_ans_text_entered(new_text):
 	if doll.get_text() == "sister":
 		doll_holder.set_text("Correct")
@@ -46,13 +42,20 @@ func _on_doll_ans_text_entered(new_text):
 		doll_holder.modulate = Color(239,0,0)
 		doll.clear()
 
-
-
-# this function is for the on off/ to turn on or off the visibility of ui panel
+func _on_luca_ans_text_entered(new_text):
+	if luca.get_text() == "grandma":
+		luca_holder.set_text("Correct")
+		luca_holder.modulate = Color(0,239,0)
+	else: 
+		luca_holder.set_text("Incorrect")
+		luca_holder.modulate = Color(239,0,0)
+		luca.clear()
+	
+#Toggle the hide and show for the question panels
 func _on_hidenshow_toggled(button_pressed):
 	if button_pressed == true:
-		ui_panel.visible = true
-		#hidenshow.modulate.a = 1
+		self.visible = false
 	else:
-		ui_panel.visible = false
-		#hidenshow.modulate.a = .5
+		self.visible = true
+
+

@@ -13,11 +13,11 @@ func _ready():
 #when mouse enters emit the view signal to show the dialogue
 func _on_Book_mouse_entered():
 	emit_signal("view", true)
-	print("entered")
+	
 
 func _on_Book_mouse_exited():
 	emit_signal("view", false)
-	print("exit")
+	
 
 
 

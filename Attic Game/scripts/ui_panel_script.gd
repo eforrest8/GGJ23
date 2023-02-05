@@ -13,6 +13,7 @@ func _on_LineEdit_text_entered(new_text):
 	else:
 		determine.modulate = Color(239,0,0)	
 		determine.set_text("No read over it agian")
+		text.clear()
 		
 	#makes intro messegae disappear
 func _on_search_button_intro_pressed():

@@ -9,32 +9,48 @@ anchor_bottom = 1.0
 mouse_filter = 1
 script = ExtResource( 1 )
 
+[node name="show_inventory" type="CheckBox" parent="."]
+margin_left = 322.0
+margin_top = 17.0
+margin_right = 480.0
+margin_bottom = 41.0
+text = "Show Inventory"
+
 [node name="inventory" parent="." instance=ExtResource( 2 )]
+visible = false
+margin_left = -14.0
 margin_top = 1.0
+margin_right = -1.0
 margin_bottom = 1.0
 mouse_filter = 1
 
-[node name="Button" type="Button" parent="."]
-margin_left = 873.0
-margin_top = 46.0
-margin_right = 956.0
-margin_bottom = 66.0
+[node name="GridContainer" type="GridContainer" parent="inventory"]
+margin_left = 561.0
+margin_top = 36.0
+margin_right = 644.0
+margin_bottom = 104.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button" type="Button" parent="inventory/GridContainer"]
+margin_right = 83.0
+margin_bottom = 20.0
 text = "open box 1"
 
-[node name="Button2" type="Button" parent="."]
-margin_left = 878.0
-margin_top = 136.0
-margin_right = 961.0
-margin_bottom = 156.0
+[node name="Button2" type="Button" parent="inventory/GridContainer"]
+margin_top = 24.0
+margin_right = 83.0
+margin_bottom = 44.0
 text = "open box 2"
 
-[node name="Button3" type="Button" parent="."]
-margin_left = 910.0
-margin_top = 543.0
-margin_right = 985.0
-margin_bottom = 563.0
+[node name="Button3" type="Button" parent="inventory/GridContainer"]
+margin_top = 48.0
+margin_right = 83.0
+margin_bottom = 68.0
 text = "Close Box"
 
-[connection signal="pressed" from="Button" to="." method="_on_Button_box1_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
+[connection signal="toggled" from="show_inventory" to="." method="_on_CheckBox_toggled"]
+[connection signal="pressed" from="inventory/GridContainer/Button" to="." method="_on_Button_box1_pressed"]
+[connection signal="pressed" from="inventory/GridContainer/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="inventory/GridContainer/Button3" to="." method="_on_Button3_pressed"]

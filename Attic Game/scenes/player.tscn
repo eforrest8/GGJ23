@@ -1,8 +1,9 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://assets/FREE Mana Seed Character Base Demo/char_a_p1/char_a_p1_0bas_humn_v01.png" type="Texture" id=1]
 [ext_resource path="res://assets/light.png" type="Texture" id=2]
 [ext_resource path="res://scripts/player_move_script.gd" type="Script" id=3]
+[ext_resource path="res://music/walking_noises.wav" type="AudioStream" id=4]
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
@@ -168,17 +169,24 @@ position = Vector2( 370, 256 )
 script = ExtResource( 3 )
 
 [node name="player_anime" type="AnimatedSprite" parent="KinematicBody2D"]
+modulate = Color( 0.333333, 0.278431, 0.278431, 1 )
 scale = Vector2( 2.32813, 2.5 )
 frames = SubResource( 7 )
 animation = "walking_forward"
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 shape = SubResource( 15 )
 
 [node name="Light2D2" type="Light2D" parent="KinematicBody2D"]
-position = Vector2( 12, -20 )
+position = Vector2( 1, -2 )
 scale = Vector2( 0.385742, 0.305664 )
 texture = ExtResource( 2 )
-energy = 0.75
+texture_scale = 1.25
+energy = 1.5
+
+[node name="footsteps" type="AudioStreamPlayer" parent="KinematicBody2D"]
+stream = ExtResource( 4 )
+volume_db = 1.0
+pitch_scale = 1.2
