@@ -7,6 +7,37 @@ overlay object with holes over text/scene/another object to reveal message
 riddle in a story
 
 
+torn up letter:
+	what's the message?
+	-a poem maybe
+		in the evening sun
+		i beheld
+		a tree
+		
+		with branches so high
+		and roots
+		so deep
+		
+		gazing at the sky
+		i wonder
+		"if now
+		
+		"the sun fell down
+		"would you
+		"shield me?"
+		
+		the leaves are silent
+		but i
+		can see
+		you care
+
+1.41421356237309504880168872420969807856967187537694807317667973799
+lockbox passcode:
+	any of:
+		436385
+		354368
+		385643
+		386543
 
 other stuff:
 

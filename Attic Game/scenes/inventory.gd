@@ -1,7 +1,7 @@
 extends Control
 
 
-onready var itemList = $MarginContainer/ItemList
+onready var itemList = $ItemList
 
 var currentBox = null
 var boxes: Dictionary

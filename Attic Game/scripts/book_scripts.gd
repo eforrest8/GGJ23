@@ -2,7 +2,7 @@ extends Area2D
 class_name Book
 
 
-signal view(visible)
+signal view(visiblity)
 
 #Connect books to themselves, book handles mouse inputs that it gets
 func _ready():

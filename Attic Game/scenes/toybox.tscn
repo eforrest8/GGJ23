@@ -19,14 +19,14 @@ region = Rect2( 0, 0, 512, 512 )
 script = ExtResource( 2 )
 
 [node name="Gradient" type="Sprite" parent="."]
-position = Vector2( 545, 194 )
+position = Vector2( 367, 198 )
 texture = SubResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 script = ExtResource( 3 )
 
 [node name="Yarn" type="Sprite" parent="."]
-position = Vector2( 660, 398 )
+position = Vector2( 498, 373 )
 scale = Vector2( 0.429687, 0.417969 )
 texture = SubResource( 3 )
 script = ExtResource( 3 )
