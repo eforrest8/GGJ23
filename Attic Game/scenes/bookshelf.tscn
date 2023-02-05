@@ -10,7 +10,7 @@
 extents = Vector2( 3.40205, 4.21689 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 1.96492, 6.50228 )
+extents = Vector2( 3.69591, 7.12329 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 2.24562, 4.52968 )
@@ -65,9 +65,6 @@ texture = ExtResource( 1 )
 position = Vector2( 375, 214 )
 scale = Vector2( 5.34375, 6.84375 )
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="book_one_collision" type="CollisionShape2D" parent="book_one"]
 position = Vector2( 3.8147e-06, 0 )
@@ -77,12 +74,9 @@ shape = SubResource( 1 )
 position = Vector2( 427, 475 )
 scale = Vector2( 5.34375, 6.84375 )
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="book_two_collision" type="CollisionShape2D" parent="book_two"]
-position = Vector2( 6.45615, -2.11873 )
+position = Vector2( 0.982452, -3.17808 )
 scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
@@ -90,46 +84,36 @@ shape = SubResource( 2 )
 position = Vector2( 581, 343 )
 scale = Vector2( 5.34375, 6.84375 )
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="book_three_collision" type="CollisionShape2D" parent="book_three"]
 position = Vector2( 0, 0.146114 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="book_four" type="Area2D" parent="."]
 position = Vector2( 591, 452 )
 scale = Vector2( 5.34375, 6.84375 )
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="book_four"]
-position = Vector2( -3.7427, 0.0730515 )
-scale = Vector2( 1, 1 )
+position = Vector2( -3.92982, 0 )
 shape = SubResource( 10 )
 
 [node name="book_five" type="Area2D" parent="."]
-position = Vector2( 591, 452 )
+position = Vector2( 435, 339 )
 scale = Vector2( 5.34375, 6.84375 )
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="book_five"]
-position = Vector2( -29.0731, -16.7877 )
-scale = Vector2( 1, 1 )
+position = Vector2( 0.561394, -0.438354 )
 shape = SubResource( 11 )
 
 [node name="book_six" type="Area2D" parent="."]
-position = Vector2( 591, 452 )
+position = Vector2( 674, 460 )
 scale = Vector2( 5.34375, 6.84375 )
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="book_six"]
-position = Vector2( -8.23393, -36.3836 )
-scale = Vector2( 1, 1 )
+position = Vector2( -23.5789, -37.5525 )
 shape = SubResource( 11 )
 
 [node name="ui_panel" type="Control" parent="."]
@@ -146,11 +130,12 @@ margin_left = -2.0
 margin_top = 3.0
 margin_right = 319.0
 margin_bottom = 440.0
+mouse_filter = 1
 
 [node name="GridContainer" type="GridContainer" parent="ui_panel/dialogue_panel"]
 margin_left = 4.0
 margin_top = 5.0
-margin_right = 707.0
+margin_right = 320.0
 margin_bottom = 493.0
 columns = 2
 

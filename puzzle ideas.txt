@@ -30,7 +30,14 @@ torn up letter:
 		but i
 		can see
 		you care
-		
+
+1.41421356237309504880168872420969807856967187537694807317667973799
+lockbox passcode:
+	any of:
+		436385
+		354368
+		385643
+		386543
 
 other stuff:
 
