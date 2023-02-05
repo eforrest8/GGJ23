@@ -2,9 +2,9 @@
 
 [ext_resource path="res://assets/Bookshelf.png" type="Texture" id=1]
 [ext_resource path="res://scripts/ui_panel_script.gd" type="Script" id=2]
-[ext_resource path="res://fonts/c-cari-pakpol-font/CariPakpol-d9jBX.otf" type="DynamicFontData" id=3]
 [ext_resource path="res://scripts/book_scripts.gd" type="Script" id=4]
 [ext_resource path="res://scripts/text_script.gd" type="Script" id=5]
+[ext_resource path="res://fonts/Itim-Regular.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3.40205, 4.21689 )
@@ -23,36 +23,36 @@ extents = Vector2( 2.12574, 5.42238 )
 
 [sub_resource type="DynamicFont" id=9]
 size = 18
-font_data = ExtResource( 3 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=13]
 size = 24
-font_data = ExtResource( 3 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 24
-font_data = ExtResource( 3 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 24
-font_data = ExtResource( 3 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=8]
 size = 24
-font_data = ExtResource( 3 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 20
-font_data = ExtResource( 3 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=5]
 outline_size = 2
 outline_color = Color( 0.0901961, 0.0705882, 0.0627451, 1 )
-font_data = ExtResource( 3 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=12]
 size = 24
-font_data = ExtResource( 3 )
+font_data = ExtResource( 6 )
 
 [node name="bookshelf" type="Node2D"]
 
@@ -83,6 +83,7 @@ __meta__ = {
 
 [node name="book_two_collision" type="CollisionShape2D" parent="book_two"]
 position = Vector2( 6.45615, -2.11873 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="book_three" type="Area2D" parent="."]
@@ -95,6 +96,7 @@ __meta__ = {
 
 [node name="book_three_collision" type="CollisionShape2D" parent="book_three"]
 position = Vector2( 0, 0.146114 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="book_four" type="Area2D" parent="."]
@@ -107,6 +109,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="book_four"]
 position = Vector2( -3.7427, 0.0730515 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 10 )
 
 [node name="book_five" type="Area2D" parent="."]
@@ -116,6 +119,7 @@ script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="book_five"]
 position = Vector2( -29.0731, -16.7877 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 11 )
 
 [node name="book_six" type="Area2D" parent="."]
@@ -125,6 +129,7 @@ script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="book_six"]
 position = Vector2( -8.23393, -36.3836 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 11 )
 
 [node name="ui_panel" type="Control" parent="."]
@@ -133,7 +138,7 @@ margin_left = 21.0
 margin_top = 103.0
 margin_right = 343.0
 margin_bottom = 541.0
-mouse_filter = 1
+mouse_filter = 2
 script = ExtResource( 2 )
 
 [node name="dialogue_panel" type="Panel" parent="ui_panel"]
@@ -141,7 +146,6 @@ margin_left = -2.0
 margin_top = 3.0
 margin_right = 319.0
 margin_bottom = 440.0
-mouse_filter = 1
 
 [node name="GridContainer" type="GridContainer" parent="ui_panel/dialogue_panel"]
 margin_left = 4.0
@@ -151,26 +155,22 @@ margin_bottom = 74.0
 columns = 2
 
 [node name="secret_code_label" type="Label" parent="ui_panel/dialogue_panel/GridContainer"]
-margin_top = 2.0
-margin_right = 188.0
-margin_bottom = 21.0
-mouse_filter = 1
+margin_right = 174.0
+margin_bottom = 23.0
 custom_fonts/font = SubResource( 9 )
 text = "Enter The Secret Code"
 
 [node name="entry" type="LineEdit" parent="ui_panel/dialogue_panel/GridContainer"]
-margin_left = 192.0
-margin_right = 250.0
+margin_left = 178.0
+margin_right = 236.0
 margin_bottom = 24.0
-mouse_filter = 1
 custom_colors/selection_color = Color( 0.647059, 0.513726, 0.513726, 1 )
 align = 1
 
 [node name="determine_placeholder" type="Label" parent="ui_panel/dialogue_panel/GridContainer"]
 margin_top = 28.0
-margin_right = 188.0
-margin_bottom = 52.0
-mouse_filter = 1
+margin_right = 174.0
+margin_bottom = 57.0
 custom_fonts/font = SubResource( 13 )
 text = "W/L Placeholder"
 
@@ -179,7 +179,6 @@ margin_left = 14.0
 margin_top = 158.0
 margin_right = 305.0
 margin_bottom = 426.0
-mouse_filter = 1
 
 [node name="dialogue_one" type="Label" parent="ui_panel/text_panel"]
 visible = false
@@ -187,7 +186,6 @@ margin_left = -3.0
 margin_top = 2.0
 margin_right = 295.0
 margin_bottom = 215.0
-mouse_filter = 1
 custom_fonts/font = SubResource( 6 )
 text = "Jeffery The Farmer
 Start
@@ -208,7 +206,6 @@ margin_left = -3.0
 margin_top = 1.0
 margin_right = 293.0
 margin_bottom = 90.0
-mouse_filter = 1
 custom_fonts/font = SubResource( 7 )
 text = "He also loved his farm, with many rabbits
 There wasn't much that Jeffery
@@ -225,7 +222,6 @@ margin_left = -3.0
 margin_top = 1.0
 margin_right = 297.0
 margin_bottom = 79.0
-mouse_filter = 1
 custom_fonts/font = SubResource( 8 )
 text = "But Jefferey had a secret
 He hated rabbits
@@ -240,7 +236,6 @@ margin_left = -3.0
 margin_top = 1.0
 margin_right = 299.0
 margin_bottom = 106.0
-mouse_filter = 1
 custom_fonts/font = SubResource( 8 )
 text = "When everyone was asleep
 he would go to the 
@@ -257,7 +252,6 @@ margin_left = -3.0
 margin_top = 1.0
 margin_right = 299.0
 margin_bottom = 106.0
-mouse_filter = 1
 custom_fonts/font = SubResource( 8 )
 text = "So one day the rabbits
 decided to poison the 
@@ -274,7 +268,6 @@ margin_left = -11.0
 margin_top = 1.0
 margin_right = 310.0
 margin_bottom = 187.0
-mouse_filter = 1
 custom_fonts/font = SubResource( 8 )
 text = "Jefferey shortly, passed 
 away and his nieces
@@ -293,7 +286,6 @@ margin_left = 10.0
 margin_top = 1.0
 margin_right = 294.0
 margin_bottom = 145.0
-mouse_filter = 1
 custom_fonts/font = SubResource( 4 )
 text = "You found an old book 
 shelf maybe you can 
@@ -302,11 +294,10 @@ message!! "
 align = 1
 
 [node name="search_button_intro" type="Button" parent="ui_panel/text_panel/dialogue_intro"]
-margin_left = 82.0
-margin_top = 94.0
-margin_right = 196.0
-margin_bottom = 116.0
-mouse_filter = 1
+margin_left = 83.0
+margin_top = 110.0
+margin_right = 197.0
+margin_bottom = 136.0
 custom_colors/font_color = Color( 0.745098, 0.705882, 0.372549, 1 )
 custom_colors/font_color_hover = Color( 0.878431, 0.819608, 0.662745, 1 )
 custom_colors/font_color_pressed = Color( 0.247059, 0.145098, 0.0235294, 1 )
@@ -315,10 +306,9 @@ text = "Search Books"
 
 [node name="instructions" type="Label" parent="ui_panel/text_panel"]
 margin_left = 23.0
-margin_top = -235.0
+margin_top = -253.0
 margin_right = 625.0
-margin_bottom = -157.0
-mouse_filter = 1
+margin_bottom = -160.0
 custom_fonts/font = SubResource( 12 )
 text = "Put the story in order to figure out the secret code
 There are 6 pages

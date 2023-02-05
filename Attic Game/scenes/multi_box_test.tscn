@@ -17,6 +17,7 @@ margin_bottom = 41.0
 text = "Show Inventory"
 
 [node name="inventory" parent="." instance=ExtResource( 2 )]
+visible = false
 margin_left = -14.0
 margin_top = 1.0
 margin_right = -1.0

@@ -7,8 +7,13 @@
 [ext_resource path="res://scripts/map_attic_script.gd" type="Script" id=5]
 [ext_resource path="res://scenes/inventory.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/portrait_img_instance.png" type="Texture" id=7]
+<<<<<<< Updated upstream
 [ext_resource path="res://fonts/c-cari-pakpol-font/CariPakpol-d9jBX.otf" type="DynamicFontData" id=8]
 [ext_resource path="res://scenes/toys/toy.gd" type="Script" id=9]
+=======
+[ext_resource path="res://fonts/Itim-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://scenes/multi_box_test.tscn" type="PackedScene" id=9]
+>>>>>>> Stashed changes
 [ext_resource path="res://scripts/player_area_entered.gd" type="Script" id=10]
 [ext_resource path="res://assets/Interior free/interior free/interior free.png" type="Texture" id=11]
 [ext_resource path="res://scripts/popup_scripts.gd" type="Script" id=12]
@@ -221,8 +226,12 @@ position = Vector2( 38, 6 )
 margin_left = -19.0
 margin_top = 20.0
 margin_right = 39.0
+<<<<<<< Updated upstream
 margin_bottom = 42.0
 mouse_filter = 1
+=======
+margin_bottom = 46.0
+>>>>>>> Stashed changes
 custom_fonts/font = SubResource( 6 )
 text = "Exit"
 

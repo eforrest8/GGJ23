@@ -48,4 +48,3 @@ func _on_Toybox_child_exiting_tree(node):
 		node.disconnect("dropped", self, "_on_child_dropped")
 		self.disconnect("grabbed", node, "_on_Toy_grabbed")
 		self.disconnect("dropped", node, "_on_Toy_dropped")
-
