@@ -53,7 +53,7 @@ func _input(event):
 			clamp(event.position.y, 0, get_viewport().size.y)
 			)
 
-func _on_Toy_dropped(node):
+func _on_Toy_dropped(_node):
 	grabbed_node = null
 
 func _on_Toy_grabbed(node):

@@ -1,7 +1,7 @@
 extends Control
 
 
-onready var itemList = $ItemList
+onready var itemList = $MarginContainer/ItemList
 
 var currentBox = null
 var boxes: Dictionary
@@ -21,6 +21,7 @@ func _on_Control_child_entered_tree(node):
 	if node is Toybox:
 		node.connect("store", itemList, "_on_item_store")
 		itemList.connect("retrieve", node, "_on_item_retrieve")
+
 
 func _on_Control_child_exiting_tree(node):
 	if node is Toybox:

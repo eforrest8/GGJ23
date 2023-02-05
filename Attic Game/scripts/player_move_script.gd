@@ -7,8 +7,6 @@ var velocity = Vector2.ZERO
 const PLAYER_SPEED = 40
 
 
-
-
 func _physics_process(_delta):
 	#moving right
 	if Input.is_action_pressed("ui_right"):

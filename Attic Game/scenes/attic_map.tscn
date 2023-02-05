@@ -1,10 +1,11 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://assets/scene_img/map.png" type="Texture" id=1]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Bookshelf.png" type="Texture" id=3]
 [ext_resource path="res://scenes/bookshelf.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/map_attic_script.gd" type="Script" id=5]
+[ext_resource path="res://scenes/inventory.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/portrait_img_instance.png" type="Texture" id=7]
 [ext_resource path="res://fonts/c-cari-pakpol-font/CariPakpol-d9jBX.otf" type="DynamicFontData" id=8]
 [ext_resource path="res://scenes/multi_box_test.tscn" type="PackedScene" id=9]
@@ -174,6 +175,12 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Control" parent="inventory" instance=ExtResource( 6 )]
+margin_left = -14.0
+margin_top = -2.0
+margin_right = -14.0
+margin_bottom = -2.0
+
 [node name="attic_ui_panel" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
@@ -216,7 +223,7 @@ valign = 1
 
 [node name="family_quiz_scene" parent="." instance=ExtResource( 14 )]
 visible = false
-position = Vector2( 38, 6 )
+position = Vector2( 21, 6 )
 
 [node name="exit_family_scene" type="Button" parent="family_quiz_scene"]
 margin_left = -19.0
