@@ -12,47 +12,27 @@ onready var doll_holder = get_node("GridContainer/doll_holder")
 onready var luca = get_node("GridContainer/luca_ans")
 onready var luca_holder = get_node("GridContainer/luca_holder")
  
-
+signal success()
 
 #These are the inputs for the line edit
 #it checks the input to make sure it is correct
 func _on_jeff_ans_text_entered(new_text):
-	if jeff.get_text() == "grandpa":
-		jeff_holder.set_text("The")
-		jeff_holder.modulate = Color(0,239,0)
-	else: 
-		jeff_holder.set_text("Incorrect")
-		jeff_holder.modulate = Color(239,0,0)
-		jeff.clear()
+	update_success()
 		
 func _on_chuck_ans_text_entered(new_text):
-	if cannit.get_text() == "uncle":
-		cannit_holder.set_text("Code")
-		cannit_holder.modulate = Color(0,239,0)
-	else: 
-		cannit_holder.set_text("Incorrect")
-		cannit_holder.modulate = Color(239,0,0)
-		cannit.clear()
+	update_success()
 		
 func _on_doll_ans_text_entered(new_text):
-	if doll.get_text() == "sister":
-		doll_holder.set_text("Is")
-		doll_holder.modulate = Color(0,239,0)
-	else: 
-		doll_holder.set_text("Incorrect")
-		doll_holder.modulate = Color(239,0,0)
-		doll.clear()
+	update_success()
 
 func _on_luca_ans_text_entered(new_text):
-	if luca.get_text() == "grandma":
-		luca_holder.set_text("Fart")
-		luca_holder.modulate = Color(0,239,0)
-	else: 
-		luca_holder.set_text("Incorrect")
-		luca_holder.modulate = Color(239,0,0)
-		luca.clear()
+	update_success()
 	
-	
+
+func update_success():
+	if luca.get_text() == "grandma" and doll.get_text() == "sister" and cannit.get_text() == "uncle" and jeff.get_text() == "grandpa":
+		emit_signal("success")
+
 #Toggle the hide and show for the question panels
 func _on_hidenshow_toggled(button_pressed):
 	if button_pressed == true:
@@ -60,3 +40,7 @@ func _on_hidenshow_toggled(button_pressed):
 	else:
 		self.visible = true
 
+
+
+func _on_Button_pressed():
+	pass # Replace with function body.

@@ -5,7 +5,23 @@ onready var family_quiz = get_node("family_quiz_scene")
 onready var map = get_node("map_bg")
 onready var objects = get_node("objects")
 onready var inventory = get_node("inventory")
+onready var quizresp = $family_quiz_scene/ui_panel
+onready var bookresp = $bookshelf_scene/ui_panel
 
+func _ready():
+	quizresp.connect("success", self, "_on_quiz_success")
+	bookresp.connect("success", self, "_on_bookshelf_success")
+
+func _on_quiz_success():
+	var med = $"Sun Medallion"
+	remove_child(med)
+	inventory.add_child(med)
+	
+func _on_bookshelf_success():
+	var med = $"Tree Medallion"
+	med.visible = true
+	remove_child(med)
+	inventory.add_child(med)
 
 # check if you entered area of bookshelf
 func _on_bs_floor_interact_body_entered(body):

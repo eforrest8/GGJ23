@@ -4,12 +4,14 @@ onready var search_button = get_node("text_panel/dialogue_intro")
 onready var text = get_node("dialogue_panel/GridContainer/entry")
 onready var determine = get_node("dialogue_panel/GridContainer/determine_placeholder")
 
+signal success()
 
 #Checks for the input in the entry
 func _on_LineEdit_text_entered(_new_text):
 	if text.get_text() == "521861":
 		determine.modulate = Color(0,239,0)
 		determine.set_text("You Cracked the Code!!!")
+		emit_signal("success")
 	else:
 		determine.modulate = Color(239,0,0)	
 		determine.set_text("No read over it agian")
