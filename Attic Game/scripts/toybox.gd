@@ -12,7 +12,7 @@ signal store(node)
 var currently_grabbed_child = null
 
 # Called when the node enters the scene tree for the first time.
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_select") and currently_grabbed_child != null:
 		remove_child(currently_grabbed_child)
 		emit_signal("store", currently_grabbed_child)

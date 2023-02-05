@@ -6,7 +6,7 @@ onready var determine = get_node("dialogue_panel/GridContainer/determine_placeho
 
 
 #Checks for the input in the entry
-func _on_LineEdit_text_entered(new_text):
+func _on_LineEdit_text_entered(_new_text):
 	if text.get_text() == "521861":
 		determine.modulate = Color(0,239,0)
 		determine.set_text("You Cracked the Code!!!")
